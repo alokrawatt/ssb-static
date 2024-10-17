@@ -9,18 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sample video data
     const videos = [
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/preview', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_2/view', title: 'Project 2', thumbnail: '/thumbnails/project2.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_3/view', title: 'Project 3', thumbnail: '/thumbnails/project3.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_4/view', title: 'Project 4', thumbnail: '/thumbnails/project4.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_5/view', title: 'Project 5', thumbnail: '/thumbnails/project5.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_6/view', title: 'Project 6', thumbnail: '/thumbnails/project6.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_7/view', title: 'Project 7', thumbnail: '/thumbnails/project7.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_8/view', title: 'Project 8', thumbnail: '/thumbnails/project8.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_9/view', title: 'Project 9', thumbnail: '/thumbnails/project9.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_10/view', title: 'Project 10', thumbnail: '/thumbnails/project10.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_11/view', title: 'Project 11', thumbnail: '/thumbnails/project11.jpg' },
+        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_12/view', title: 'Project 12', thumbnail: '/thumbnails/project12.jpg' },
     ];
 
     // Populate video grid
@@ -76,8 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Open video modal
-    function  openVideoModal(videoUrl) {
-        videoPlayer.src = videoUrl.replace('/preview', '/embed?autoplay=1');
+    function openVideoModal(videoUrl) {
+        // Extract the file ID from the URL
+        const fileId = videoUrl.split('/')[5];
+        // Construct the correct embed URL
+        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        videoPlayer.src = embedUrl;
         modal.style.display = 'block';
     }
 
