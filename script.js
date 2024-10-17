@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function openVideoModal(videoUrl) {
         // Extract the file ID from the URL
         const fileId = videoUrl.split('/')[5];
-        // Construct the correct embed URL
-        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        // Construct the correct embed URL with autoplay
+        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
         videoPlayer.src = embedUrl;
-        modal.style.display = 'block';
+        modal.style.display = 'block'; // Change to 'flex' to center the modal
     }
 
     // Close video modal
