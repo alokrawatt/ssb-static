@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_10/view', title: 'Project 10', thumbnail: '/thumbnails/project10.jpg' },
-        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_11/view', title: 'Project 11', thumbnail: '/thumbnails/project11.jpg' },
-        { url: 'https://drive.google.com/file/d/YOUR_FILE_ID_12/view', title: 'Project 12', thumbnail: '/thumbnails/project12.jpg' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
     ];
 
     // Populate video grid
