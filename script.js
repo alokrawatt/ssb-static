@@ -4,17 +4,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const moon = document.querySelector('.moon');
     const body = document.body; // Reference to the body element
 
+    // Set a consistent size for the sun and moon
+    const sunMoonSize = '400px'; // Size for all times
+
     function updateCelestialBody() {
         const now = new Date();
         const hour = now.getHours();
 
         celestialContainer.classList.remove('morning', 'afternoon', 'evening', 'night');
 
+        // Set the size for sun and moon
+        sun.style.width = sunMoonSize;
+        sun.style.height = sunMoonSize;
+        moon.style.width = sunMoonSize;
+        moon.style.height = sunMoonSize;
+
         if (hour >= 5 && hour < 12) { // Morning
             celestialContainer.classList.add('morning');
             sun.style.opacity = 1; // Fully visible
-            sun.style.width = '135px'; // Normal size
-            sun.style.height = '135px'; // Normal size
             sun.style.backgroundColor = '#FFB74D'; // Softer morning glow
             sun.style.boxShadow = '0 0 50px #FFB74D'; // Morning glow
             moon.style.opacity = 0; // Invisible
@@ -22,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (hour >= 12 && hour < 17) { // Afternoon
             celestialContainer.classList.add('afternoon');
             sun.style.opacity = 1; // Fully visible
-            sun.style.width = '150px'; // Slightly larger
-            sun.style.height = '150px'; // Slightly larger
             sun.style.backgroundColor = '#FFA500'; // Bright afternoon glow
             sun.style.boxShadow = '0 0 100px #FFA500, 0 0 150px #FF4500'; // Intense glow
             moon.style.opacity = 0; // Invisible
@@ -31,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (hour >= 17 && hour < 20) { // Evening
             celestialContainer.classList.add('evening');
             sun.style.opacity = 0.8; // Slightly transparent
-            sun.style.width = '140px'; // Slightly smaller
-            sun.style.height = '140px'; // Slightly smaller
             sun.style.backgroundColor = '#FF4500'; // Warm evening glow
             sun.style.boxShadow = '0 0 50px #FF4500'; // Evening glow
             moon.style.opacity = 0; // Invisible

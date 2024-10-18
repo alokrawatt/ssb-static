@@ -87,13 +87,13 @@ body {
 
 /* Hero section */
 .hero {
+    position: relative; /* Ensure positioning context */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .hero .container {
@@ -111,18 +111,28 @@ body {
     z-index: 1;
 }
 
-.sun {
+.sun, .moon {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%; /* Adjust vertical position */
+    left: 10%; /* Move further left */
     transform: translate(-50%, -50%);
-    width: 135px;
-    height: 135px;
-    background-color: #FFA500;
+    width: 400px; /* Increased size to 2x */
+    height: 400px; /* Increased size to 2x */
     border-radius: 50%;
+    transition: opacity 1s ease-in-out;
+    z-index: 1; /* Ensure it overlays text */
+}
+
+.sun {
+    background-color: #FFA500;
     box-shadow: 0 0 50px #FFA500;
-    animation: glow 4s ease-in-out infinite alternate;
-    transition: opacity 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+.moon {
+    background-color: #F4F6F0; /* Moon color */
+    box-shadow: 0 0 50px #F4F6F0; /* Moon glow */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
 }
 
 .sun-layer {
@@ -181,14 +191,17 @@ body {
 .sun-layer:nth-child(20) .curvy-layer { background-color: #FF8C00; width: 5%; height: 5%; animation-duration: 80s; }
 
 .hero h1 {
-    font-size: 6vw;
+    font-size: 8vw; /* Adjusted font size for better fit */
     margin-bottom: 1rem;
-    width: 70%;
+    width: 100%; /* Ensure it takes full width */
     line-height: 1.2;
     position: relative;
     display: inline-block;
     z-index: 3;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Optional: add ellipsis if text overflows */
 }
 
 .animated-text {
@@ -427,6 +440,16 @@ footer {
         height: 105px;
         animation: glow 4s ease-in-out infinite alternate;
     }
+
+    .celestial-container {
+        width: 700px; /* Adjusted for 2x size */
+        height: 700px; /* Adjusted for 2x size */
+    }
+
+    .sun, .moon {
+        width: 200px; /* Adjusted for 2x size */
+        height: 200px; /* Adjusted for 2x size */
+    }
 }
 
 @media (max-width: 480px) {
@@ -449,6 +472,16 @@ footer {
         height: 75px;
         animation: glow 4s ease-in-out infinite alternate;
     }
+
+    .celestial-container {
+        width: 500px; /* Adjusted for 2x size */
+        height: 500px; /* Adjusted for 2x size */
+    }
+
+    .sun, .moon {
+        width: 200px; /* Adjusted for 2x size */
+        height: 200px; /* Adjusted for 2x size */
+    }
 }
 
 .celestial-container {
@@ -463,13 +496,14 @@ footer {
 
 .sun, .moon {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%; /* Adjust vertical position */
+    left: 10%; /* Move further left */
     transform: translate(-50%, -50%);
-    width: 135px;
-    height: 135px;
+    width: 400px; /* Increased size to 2x */
+    height: 400px; /* Increased size to 2x */
     border-radius: 50%;
     transition: opacity 1s ease-in-out;
+    z-index: 1; /* Ensure it overlays text */
 }
 
 .sun {
@@ -482,8 +516,6 @@ footer {
     box-shadow: 0 0 50px #F4F6F0; /* Moon glow */
     opacity: 0; /* Initially invisible */
     transition: opacity 1s ease-in-out; /* Smooth transition */
-    width: 135px; /* Ensure the size is appropriate */
-    height: 135px; /* Ensure the size is appropriate */
 }
 
 .sun-layer {
@@ -551,8 +583,8 @@ footer {
     }
 
     .sun, .moon {
-        width: 105px;
-        height: 105px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -565,7 +597,18 @@ footer {
     }
 
     .sun, .moon {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
     }
+}
+
+/* Adjust the position of the sun/moon */
+.sun {
+    top: 40%; /* Adjust vertical position */
+    left: -60%; /* Adjust horizontal position */
+}
+
+.moon {
+    top: 40%; /* Adjust vertical position */
+    left: -60%; /* Adjust horizontal position */
 }
