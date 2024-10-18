@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sun = document.querySelector('.sun');
     const moon = document.querySelector('.moon');
     const body = document.body; // Reference to the body element
+    const heading = document.querySelector('.hero h1'); // Reference to the h1 element
 
     // Set a consistent size for the sun and moon
     const sunMoonSize = '400px'; // Size for all times
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const hour = now.getHours();
 
         celestialContainer.classList.remove('morning', 'afternoon', 'evening', 'night');
+        heading.classList.remove('night-text'); // Remove night class initially
 
         // Set the size for sun and moon
         sun.style.width = sunMoonSize;
@@ -45,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sun.style.opacity = 0; // Invisible
             moon.style.opacity = 1; // Fully visible
             body.style.backgroundColor = '#000000'; // Change to a darker background for night
+            heading.classList.add('night-text'); // Add night class for orange text
         }
     }
 
