@@ -10,17 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sample video data
     const videos = [
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 2', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 3', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 4', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 5', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 6', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 7', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 8', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 9', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 10', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 11', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
     ];
 
     // Populate video grid
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile menu toggle
     menuToggle.addEventListener('click', () => {
+        
         navLinks.classList.toggle('active');
     });
 
@@ -79,10 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function openVideoModal(videoUrl) {
         // Extract the file ID from the URL
         const fileId = videoUrl.split('/')[5];
-        // Construct the correct embed URL with autoplay
-        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview?autoplay=1`;
+        // Construct the correct embed URL
+        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
         videoPlayer.src = embedUrl;
-        modal.style.display = 'block'; // Change to 'flex' to center the modal
+        modal.style.display = 'block';
     }
 
     // Close video modal
