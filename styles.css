@@ -6,9 +6,10 @@
 }
 
 body {
+    background-color: #1a1a1a; /* Dark background for better contrast */
+    color: #fff; /* Change text color to white for visibility */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    color: #333;
 }
 
 .container {
@@ -105,8 +106,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     z-index: 1;
 }
 
@@ -115,11 +116,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 120px;
+    width: 135px;
+    height: 135px;
     background-color: #FFA500;
     border-radius: 50%;
     box-shadow: 0 0 50px #FFA500;
+    animation: glow 4s ease-in-out infinite alternate;
+    transition: opacity 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, background-color 1s ease-in-out;
 }
 
 .sun-layer {
@@ -127,34 +130,55 @@ body {
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    animation: spin 30s linear infinite;
-}
-
-.layer-1 {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(255,165,0,0.3) 0%, rgba(255,165,0,0) 70%);
-    animation-duration: 20s;
-}
-
-.layer-2 {
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(255,165,0,0.2) 0%, rgba(255,165,0,0) 70%);
-    animation-duration: 25s;
-}
-
-.layer-3 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255,165,0,0.1) 0%, rgba(255,165,0,0) 70%);
-    animation-duration: 30s;
+    animation: spin 60s linear infinite;
+    opacity: 0.2;
 }
 
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 50px #FFA500;
+    }
+    100% {
+        box-shadow: 0 0 100px #FFA500, 0 0 150px #FF4500;
+    }
+}
+
+.curvy-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    filter: url(#curvy);
+}
+
+/* Generate 20 curvy layers with different sizes and colors */
+.sun-layer:nth-child(1) .curvy-layer { background-color: #FFA500; width: 100%; height: 100%; animation-duration: 61s; }
+.sun-layer:nth-child(2) .curvy-layer { background-color: #FF8C00; width: 95%; height: 95%; animation-duration: 62s; }
+.sun-layer:nth-child(3) .curvy-layer { background-color: #FF7F50; width: 90%; height: 90%; animation-duration: 63s; }
+.sun-layer:nth-child(4) .curvy-layer { background-color: #FF6347; width: 85%; height: 85%; animation-duration: 64s; }
+.sun-layer:nth-child(5) .curvy-layer { background-color: #FF4500; width: 80%; height: 80%; animation-duration: 65s; }
+.sun-layer:nth-child(6) .curvy-layer { background-color: #FFD700; width: 75%; height: 75%; animation-duration: 66s; }
+.sun-layer:nth-child(7) .curvy-layer { background-color: #FFA500; width: 70%; height: 70%; animation-duration: 67s; }
+.sun-layer:nth-child(8) .curvy-layer { background-color: #FF8C00; width: 65%; height: 65%; animation-duration: 68s; }
+.sun-layer:nth-child(9) .curvy-layer { background-color: #FF7F50; width: 60%; height: 60%; animation-duration: 69s; }
+.sun-layer:nth-child(10) .curvy-layer { background-color: #FF6347; width: 55%; height: 55%; animation-duration: 70s; }
+.sun-layer:nth-child(11) .curvy-layer { background-color: #FF4500; width: 50%; height: 50%; animation-duration: 71s; }
+.sun-layer:nth-child(12) .curvy-layer { background-color: #FFD700; width: 45%; height: 45%; animation-duration: 72s; }
+.sun-layer:nth-child(13) .curvy-layer { background-color: #FFA500; width: 40%; height: 40%; animation-duration: 73s; }
+.sun-layer:nth-child(14) .curvy-layer { background-color: #FF8C00; width: 35%; height: 35%; animation-duration: 74s; }
+.sun-layer:nth-child(15) .curvy-layer { background-color: #FF7F50; width: 30%; height: 30%; animation-duration: 75s; }
+.sun-layer:nth-child(16) .curvy-layer { background-color: #FF6347; width: 25%; height: 25%; animation-duration: 76s; }
+.sun-layer:nth-child(17) .curvy-layer { background-color: #FF4500; width: 20%; height: 20%; animation-duration: 77s; }
+.sun-layer:nth-child(18) .curvy-layer { background-color: #FFD700; width: 15%; height: 15%; animation-duration: 78s; }
+.sun-layer:nth-child(19) .curvy-layer { background-color: #FFA500; width: 10%; height: 10%; animation-duration: 79s; }
+.sun-layer:nth-child(20) .curvy-layer { background-color: #FF8C00; width: 5%; height: 5%; animation-duration: 80s; }
 
 .hero h1 {
     font-size: 6vw;
@@ -232,7 +256,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height:  100%;
     object-fit: cover;
 }
 
@@ -394,28 +418,14 @@ footer {
     }
 
     .sun-container {
-        width: 200px;
-        height: 200px;
+        width: 350px;
+        height: 350px;
     }
 
     .sun {
-        width: 80px;
-        height: 80px;
-    }
-
-    .layer-1 {
-        width: 140px;
-        height: 140px;
-    }
-
-    .layer-2 {
-        width: 170px;
-        height: 170px;
-    }
-
-    .layer-3 {
-        width: 200px;
-        height: 200px;
+        width: 105px;
+        height: 105px;
+        animation: glow 4s ease-in-out infinite alternate;
     }
 }
 
@@ -430,27 +440,132 @@ footer {
     }
 
     .sun-container {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
     }
 
     .sun {
-        width: 60px;
-        height: 60px;
+        width: 75px;
+        height: 75px;
+        animation: glow 4s ease-in-out infinite alternate;
+    }
+}
+
+.celestial-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    z-index: 1;
+}
+
+.sun, .moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    transition: opacity 1s ease-in-out;
+}
+
+.sun {
+    background-color: #FFA500;
+    box-shadow: 0 0 50px #FFA500;
+}
+
+.moon {
+    background-color: #F4F6F0; /* Moon color */
+    box-shadow: 0 0 50px #F4F6F0; /* Moon glow */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+    width: 135px; /* Ensure the size is appropriate */
+    height: 135px; /* Ensure the size is appropriate */
+}
+
+.sun-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: spin 60s linear infinite;
+    opacity: 0.2;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.curvy-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    filter: url(#curvy);
+}
+
+/* Time-based styles */
+.morning .sun {
+    background-color: #FFB74D;
+    box-shadow: 0 0 50px #FFB74D;
+}
+
+.afternoon .sun {
+    background-color: #FFA500;
+    box-shadow: 0 0 100px #FFA500, 0 0 150px #FF4500;
+}
+
+.evening .sun {
+    background-color: #FF4500;
+    box-shadow: 0 0 50px #FF4500;
+}
+
+.night .sun {
+    opacity: 0;
+}
+
+.night .moon {
+    opacity: 1;
+}
+
+.night .sun-layer {
+    opacity: 0;
+}
+
+/* ... (rest of the styles remain unchanged) ... */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* ... (other styles remain unchanged) ... */
+
+    .celestial-container {
+        width: 350px;
+        height: 350px;
     }
 
-    .layer-1 {
-        width: 100px;
-        height: 100px;
+    .sun, .moon {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ... (other styles remain unchanged) ... */
+
+    .celestial-container {
+        width: 250px;
+        height: 250px;
     }
 
-    .layer-2 {
-        width: 125px;
-        height: 125px;
-    }
-
-    .layer-3  {
-        width: 150px;
-        height: 150px;
+    .sun, .moon {
+        width: 75px;
+        height: 75px;
     }
 }

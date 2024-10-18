@@ -8,6 +8,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
+    <svg width="0" height="0">
+        <filter id="curvy">
+            <feTurbulence type="turbulence" baseFrequency="0.01 0.02" numOctaves="3" seed="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
     <div class="bg-grid-pattern"></div>
     <nav id="navbar">
         <div class="container">
@@ -25,17 +32,34 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <div class="sun-container">
+                <div class="celestial-container">
                     <div class="sun"></div>
-                    <div class="sun-layer layer-1"></div>
-                    <div class="sun-layer layer-2"></div>
-                    <div class="sun-layer layer-3"></div>
+                    <div class="moon"></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
+                    <div class="sun-layer"><div class="curvy-layer"></div></div>
                 </div>
                 <h1 class="animated-text">Suraj Singh Bartwal</h1>
-                <p class="animated-text-delay">Professional Video Editor & Motion Graphics Designer</p>
+                <p class="animated-text-delay">Professional Video Editor & Storyteller</p>
             </div>
         </section>
-
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <h2>Portfolio</h2>
@@ -62,7 +86,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Suraj Singh Bartwal. All rights reserved.</p>
+                <p>&copy; 2023 Suraj Singh Bartwal. All rights reserved.</p>
             </div>
         </div>
     </footer>

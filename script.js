@@ -1,3 +1,57 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const celestialContainer = document.querySelector('.celestial-container');
+    const sun = document.querySelector('.sun');
+    const moon = document.querySelector('.moon');
+    const body = document.body; // Reference to the body element
+
+    function updateCelestialBody() {
+        const now = new Date();
+        const hour = now.getHours();
+
+        celestialContainer.classList.remove('morning', 'afternoon', 'evening', 'night');
+
+        if (hour >= 5 && hour < 12) { // Morning
+            celestialContainer.classList.add('morning');
+            sun.style.opacity = 1; // Fully visible
+            sun.style.width = '135px'; // Normal size
+            sun.style.height = '135px'; // Normal size
+            sun.style.backgroundColor = '#FFB74D'; // Softer morning glow
+            sun.style.boxShadow = '0 0 50px #FFB74D'; // Morning glow
+            moon.style.opacity = 0; // Invisible
+            body.style.backgroundColor = '#87CEEB'; // Light blue for morning
+        } else if (hour >= 12 && hour < 17) { // Afternoon
+            celestialContainer.classList.add('afternoon');
+            sun.style.opacity = 1; // Fully visible
+            sun.style.width = '150px'; // Slightly larger
+            sun.style.height = '150px'; // Slightly larger
+            sun.style.backgroundColor = '#FFA500'; // Bright afternoon glow
+            sun.style.boxShadow = '0 0 100px #FFA500, 0 0 150px #FF4500'; // Intense glow
+            moon.style.opacity = 0; // Invisible
+            body.style.backgroundColor = '#87CEEB'; // Light blue for afternoon
+        } else if (hour >= 17 && hour < 20) { // Evening
+            celestialContainer.classList.add('evening');
+            sun.style.opacity = 0.8; // Slightly transparent
+            sun.style.width = '140px'; // Slightly smaller
+            sun.style.height = '140px'; // Slightly smaller
+            sun.style.backgroundColor = '#FF4500'; // Warm evening glow
+            sun.style.boxShadow = '0 0 50px #FF4500'; // Evening glow
+            moon.style.opacity = 0; // Invisible
+            body.style.backgroundColor = '#FFDEAD'; // Light peach for evening
+        } else { // Night (8 PM - 4:59 AM)
+            celestialContainer.classList.add('night');
+            sun.style.opacity = 0; // Invisible
+            moon.style.opacity = 1; // Fully visible
+            body.style.backgroundColor = '#000000'; // Change to a darker background for night
+        }
+    }
+
+    // Update initially
+    updateCelestialBody();
+
+    // Update every minute
+    setInterval(updateCelestialBody, 60000);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
     const menuToggle = document.querySelector('.menu-toggle');
