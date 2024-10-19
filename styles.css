@@ -436,6 +436,7 @@ footer {
 
     .hero p {
         font-size: 1.4rem;
+        text-align: left;
     }
 
     .sun-container {
