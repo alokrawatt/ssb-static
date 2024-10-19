@@ -430,6 +430,7 @@ footer {
     .hero h1 {
         font-size: 10vw;
         width: 90%;
+        margin-left: -10px;
     }
 
     .hero p {
