@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sample video data
     const videos = [
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1VIE4uCbyi3SW7f4VoNF-m_6wEHujcLrU/view', title: 'Project 2', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1VIE4uCbyi3SW7f4VoNF-m_6wEHujcLrU/view', title: 'Project 2', thumbnail: '/thumbnails/project2.png' },
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 3', thumbnail: '/thumbnails/project1.png' },
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 4', thumbnail: '/thumbnails/project1.png' },
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 5', thumbnail: '/thumbnails/project1.png' },
