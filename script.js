@@ -71,16 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const videos = [
         { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/project1.png' },
         { url: 'https://drive.google.com/file/d/1VIE4uCbyi3SW7f4VoNF-m_6wEHujcLrU/view', title: 'Project 2', thumbnail: '/thumbnails/project2.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 3', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 4', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 5', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 6', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 7', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 8', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 9', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 10', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 11', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1V2epZujQsBRa7334c2G8kZymZvamsUll/view', title: 'Project 3', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1UWcgvIqVCqRKKbohRm5nzK9CJDPqMuTP/view', title: 'Project 4', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1VSe97E3-8M6Pm1Whfa6LjDBK1-sl9tYv/view', title: 'Project 5', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1VVHzDqbhpkkgrzk4sCrSfCJCp2cN3yXC/view', title: 'Project 6', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1VsOISFEAtJzHbLKI-6RreE7qoA8dXN-z/view', title: 'Project 7', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1VrCgOtePotJl3FPFbA571wJ_NN82Z2uc/view', title: 'Project 8', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1V-PVR9ESMRZuqyrYjHhAq3MsV-r_qQU8/view', title: 'Project 9', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1V8sirf91C87XUGbrxIz3_R0Hz6Nw_CHo/view', title: 'Project 10', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Vu3ElV3F0EO_NU3n2z4kC7_S4a3EHhsL/view', title: 'Project 11', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1Vez3A5nZVgU91he7mmGUS--kctwN86Sz/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
     ];
 
     // Populate video grid
