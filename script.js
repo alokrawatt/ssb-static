@@ -78,12 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: 'https://drive.google.com/file/d/1VsOISFEAtJzHbLKI-6RreE7qoA8dXN-z/view', title: 'Project 7', thumbnail: '/thumbnails/project7.png' },
         { url: 'https://drive.google.com/file/d/1VrCgOtePotJl3FPFbA571wJ_NN82Z2uc/view', title: 'Project 8', thumbnail: '/thumbnails/project8.png' },
         { url: 'https://drive.google.com/file/d/1V-PVR9ESMRZuqyrYjHhAq3MsV-r_qQU8/view', title: 'Project 9', thumbnail: '/thumbnails/project9.png' },
-        { url: 'https://drive.google.com/file/d/1V8sirf91C87XUGbrxIz3_R0Hz6Nw_CHo/view', title: 'Project 10', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Vu3ElV3F0EO_NU3n2z4kC7_S4a3EHhsL/view', title: 'Project 11', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Vez3A5nZVgU91he7mmGUS--kctwN86Sz/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/168hjwAOcYNb9Pvt-F2659azGTvSsQLoO/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1Seh66kw59ejNiwB3gqiBoguWMZ5_3cTk/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
-        { url: 'https://drive.google.com/file/d/1SkPbYuovEANbxMBSNu3Z5m245V5OKt8d/view', title: 'Project 12', thumbnail: '/thumbnails/project1.png' },
+        { url: 'https://drive.google.com/file/d/1V8sirf91C87XUGbrxIz3_R0Hz6Nw_CHo/view', title: 'Project 10', thumbnail: '/thumbnails/project10.png' },
+        { url: 'https://drive.google.com/file/d/1Vu3ElV3F0EO_NU3n2z4kC7_S4a3EHhsL/view', title: 'Project 11', thumbnail: '/thumbnails/project11.png' },
+        { url: 'https://drive.google.com/file/d/1Vez3A5nZVgU91he7mmGUS--kctwN86Sz/view', title: 'Project 12', thumbnail: '/thumbnails/project12.png' },
+        { url: 'https://drive.google.com/file/d/168hjwAOcYNb9Pvt-F2659azGTvSsQLoO/view', title: 'Project 12', thumbnail: '/thumbnails/project13.png' },
+        { url: 'https://drive.google.com/file/d/1Seh66kw59ejNiwB3gqiBoguWMZ5_3cTk/view', title: 'Project 12', thumbnail: '/thumbnails/project14.png' },
+        { url: 'https://drive.google.com/file/d/1SkPbYuovEANbxMBSNu3Z5m245V5OKt8d/view', title: 'Project 12', thumbnail: '/thumbnails/project15.png' },
 
     ];
 
