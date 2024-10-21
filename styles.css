@@ -653,7 +653,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
+    .hero h1 { 
         font-size: 12vw; /* Adjust font size for mobile */
         width: 100%; /* Ensure it takes full width */
     }

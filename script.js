@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     const closeBtn = document.querySelector('.close');
+    
 
     // Sample video data
     const videos = [
