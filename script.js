@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Construct the correct embed URL
         const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
         videoPlayer.src = embedUrl;
-        modal.style.display = 'block';
+        modal.style.display = 'flex'; // Change to 'flex' to center content
     }
 
     // Close video modal
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function closeVideoModal() {
-        modal.style.display = 'none';
-        videoPlayer.src = '';
+        modal.style.display = 'none'; // Hide the modal
+        videoPlayer.src = ''; // Reset the video source
     }
 });
