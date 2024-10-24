@@ -75,17 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: 'https://drive.google.com/file/d/1V2epZujQsBRa7334c2G8kZymZvamsUll/view', title: 'Project 3', thumbnail: '/thumbnails/project3.png' },
         { url: 'https://drive.google.com/file/d/1UWcgvIqVCqRKKbohRm5nzK9CJDPqMuTP/view', title: 'Project 4', thumbnail: '/thumbnails/project4.png' },
         { url: 'https://drive.google.com/file/d/1VSe97E3-8M6Pm1Whfa6LjDBK1-sl9tYv/view', title: 'Project 5', thumbnail: '/thumbnails/project5.png' },
-        { url: 'https://drive.google.com/file/d/1VVHzDqbhpkkgrzk4sCrSfCJCp2cN3yXC/view', title: 'Project 6', thumbnail: '/thumbnails/project6.png' },
-        { url: 'https://drive.google.com/file/d/1VsOISFEAtJzHbLKI-6RreE7qoA8dXN-z/view', title: 'Project 7', thumbnail: '/thumbnails/project7.png' },
-        { url: 'https://drive.google.com/file/d/1VrCgOtePotJl3FPFbA571wJ_NN82Z2uc/view', title: 'Project 8', thumbnail: '/thumbnails/project8.png' },
-        { url: 'https://drive.google.com/file/d/1V-PVR9ESMRZuqyrYjHhAq3MsV-r_qQU8/view', title: 'Project 9', thumbnail: '/thumbnails/project9.png' },
-        { url: 'https://drive.google.com/file/d/1V8sirf91C87XUGbrxIz3_R0Hz6Nw_CHo/view', title: 'Project 10', thumbnail: '/thumbnails/project10.png' },
-        { url: 'https://drive.google.com/file/d/1Vu3ElV3F0EO_NU3n2z4kC7_S4a3EHhsL/view', title: 'Project 11', thumbnail: '/thumbnails/project11.png' },
-        { url: 'https://drive.google.com/file/d/1Vez3A5nZVgU91he7mmGUS--kctwN86Sz/view', title: 'Project 12', thumbnail: '/thumbnails/project12.png' },
-        { url: 'https://drive.google.com/file/d/168hjwAOcYNb9Pvt-F2659azGTvSsQLoO/view', title: 'Project 12', thumbnail: '/thumbnails/project13.png' },
-        { url: 'https://drive.google.com/file/d/1Seh66kw59ejNiwB3gqiBoguWMZ5_3cTk/view', title: 'Project 12', thumbnail: '/thumbnails/project14.png' },
-        { url: 'https://drive.google.com/file/d/1SkPbYuovEANbxMBSNu3Z5m245V5OKt8d/view', title: 'Project 12', thumbnail: '/thumbnails/project15.png' },
-
+        { url: 'https://drive.google.com/file/d/1VsOISFEAtJzHbLKI-6RreE7qoA8dXN-z/view', title: 'Project 6', thumbnail: '/thumbnails/project7.png' },
+        { url: 'https://drive.google.com/file/d/1VrCgOtePotJl3FPFbA571wJ_NN82Z2uc/view', title: 'Project 7', thumbnail: '/thumbnails/project8.png' },
+        { url: 'https://drive.google.com/file/d/1V-PVR9ESMRZuqyrYjHhAq3MsV-r_qQU8/view', title: 'Project 8', thumbnail: '/thumbnails/project9.png' },
+        { url: 'https://drive.google.com/file/d/1V8sirf91C87XUGbrxIz3_R0Hz6Nw_CHo/view', title: 'Project 9', thumbnail: '/thumbnails/project10.png' },
+        { url: 'https://drive.google.com/file/d/1Vu3ElV3F0EO_NU3n2z4kC7_S4a3EHhsL/view', title: 'Project 10', thumbnail: '/thumbnails/project11.png' },
+        { url: 'https://drive.google.com/file/d/168hjwAOcYNb9Pvt-F2659azGTvSsQLoO/view', title: 'Project 11', thumbnail: '/thumbnails/project13.png' },
+        { url: 'https://drive.google.com/file/d/1Seh66kw59ejNiwB3gqiBoguWMZ5_3cTk/view', title: 'Project 14', thumbnail: '/thumbnails/project14.png' },
+        { url: 'https://drive.google.com/file/d/1SkPbYuovEANbxMBSNu3Z5m245V5OKt8d/view', title: 'Project 15', thumbnail: '/thumbnails/project15.png' },
+        { url: 'https://drive.google.com/file/d/1nhh8dTAoA2wCKpBxaul01mghygi7KFFE/view', title: 'Project 16', thumbnail: '/thumbnails/project15.png' },
+        { url: 'https://drive.google.com/file/d/1noKgrsDo1xNz1ZO0OPnKIR8LBsXOQFMf/view', title: 'Project 16', thumbnail: '/thumbnails/project15.png' },
     ];
 
     // Populate video grid
