@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sample video data
     const videos = [
-        { url: 'https://drive.google.com/file/d/1Ut0mcx4Or6akitvCUiS76leFQs2pki1b/view', title: 'Project 1', thumbnail: '/thumbnails/projectone.png' },
+        { url: 'https://drive.google.com/file/d/1ndYT2Yb7HAgmNXtHmgNY85E8CCfMuCvY/view', title: 'Project 1', thumbnail: '/thumbnails/projectone.png' },
         { url: 'https://drive.google.com/file/d/1VIE4uCbyi3SW7f4VoNF-m_6wEHujcLrU/view', title: 'Project 2', thumbnail: '/thumbnails/project2.png' },
         { url: 'https://drive.google.com/file/d/1V2epZujQsBRa7334c2G8kZymZvamsUll/view', title: 'Project 3', thumbnail: '/thumbnails/project3.png' },
         { url: 'https://drive.google.com/file/d/1UWcgvIqVCqRKKbohRm5nzK9CJDPqMuTP/view', title: 'Project 4', thumbnail: '/thumbnails/project4.png' },
