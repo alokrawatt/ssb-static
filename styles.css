@@ -132,24 +132,9 @@ body {
 }
 
 .moon {
-    background: 
-        /* Large craters */
-        radial-gradient(circle at 25% 25%, rgba(150, 150, 150, 0.6) 5%, transparent 15%),
-        radial-gradient(circle at 75% 45%, rgba(150, 150, 150, 0.6) 8%, transparent 18%),
-        radial-gradient(circle at 35% 65%, rgba(150, 150, 150, 0.6) 7%, transparent 17%),
-        radial-gradient(circle at 65% 75%, rgba(150, 150, 150, 0.6) 6%, transparent 16%),
-        /* Medium craters */
-        radial-gradient(circle at 45% 35%, rgba(150, 150, 150, 0.4) 4%, transparent 10%),
-        radial-gradient(circle at 55% 65%, rgba(150, 150, 150, 0.4) 5%, transparent 11%),
-        radial-gradient(circle at 85% 25%, rgba(150, 150, 150, 0.4) 3%, transparent 9%),
-        /* Small craters */
-        radial-gradient(circle at 15% 85%, rgba(150, 150, 150, 0.3) 2%, transparent 6%),
-        radial-gradient(circle at 75% 85%, rgba(150, 150, 150, 0.3) 2%, transparent 6%),
-        radial-gradient(circle at 85% 85%, rgba(150, 150, 150, 0.3) 2%, transparent 6%),
-        /* Base moon color with slight gradient */
-        radial-gradient(circle at 50% 50%, #F4F6F0 50%, #E1E3DD 100%);
-    box-shadow: 0 0 50px #F4F6F0;
-    opacity: 0;
+    background-color: #F4F6F0; /* Base moon color */
+    box-shadow: 0 0 50px #F4F6F0; /* Moon glow */
+    opacity: 0; /* Initially invisible */
     transition: opacity 1s ease-in-out;
     position: absolute;
     top: 40%;
@@ -600,10 +585,18 @@ footer {
 }
 
 .moon {
-    background-color: #F4F6F0; /* Moon color */
+    background-color: #F4F6F0; /* Base moon color */
     box-shadow: 0 0 50px #F4F6F0; /* Moon glow */
     opacity: 0; /* Initially invisible */
-    transition: opacity 1s ease-in-out; /* Smooth transition */
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .sun-layer {
