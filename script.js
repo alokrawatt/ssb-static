@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: 'https://drive.google.com/file/d/1Seh66kw59ejNiwB3gqiBoguWMZ5_3cTk/view', title: 'Project 14', thumbnail: '/thumbnails/project14.png' },
         { url: 'https://drive.google.com/file/d/1SkPbYuovEANbxMBSNu3Z5m245V5OKt8d/view', title: 'Project 15', thumbnail: '/thumbnails/project15.png' },
         { url: 'https://drive.google.com/file/d/1nhh8dTAoA2wCKpBxaul01mghygi7KFFE/view', title: 'Project 16', thumbnail: '/thumbnails/project15.png' },
-        { url: 'https://drive.google.com/file/d/1noKgrsDo1xNz1ZO0OPnKIR8LBsXOQFMf/view', title: 'Project 16', thumbnail: '/thumbnails/project15.png' },
+        { url: 'https://drive.google.com/file/d/1noKgrsDo1xNz1ZO0OPnKIR8LBsXOQFMf/view', title: 'Project 17', thumbnail: '/thumbnails/project15.png' },
     ];
 
     // Populate video grid
