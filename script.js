@@ -87,6 +87,38 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: 'https://drive.google.com/file/d/1noKgrsDo1xNz1ZO0OPnKIR8LBsXOQFMf/view', title: 'Project 17', thumbnail: '/thumbnails/project15.png' },
     ];
 
+    let currentVideoIndex = 0; // Track the current video index
+
+    // Function to open video modal
+    function openVideoModal(videoUrl) {
+        const fileId = videoUrl.split('/')[5];
+        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        videoPlayer.src = embedUrl;
+        modal.style.display = 'flex'; // Show modal
+    }
+
+    // Function to load the current video
+    function loadCurrentVideo() {
+        const videoUrl = videos[currentVideoIndex].url;
+        openVideoModal(videoUrl);
+    }
+
+    // Previous button functionality
+    document.getElementById('prevButton').addEventListener('click', () => {
+        if (currentVideoIndex > 0) {
+            currentVideoIndex--;
+            loadCurrentVideo();
+        }
+    });
+
+    // Next button functionality
+    document.getElementById('nextButton').addEventListener('click', () => {
+        if (currentVideoIndex < videos.length - 1) {
+            currentVideoIndex++;
+            loadCurrentVideo();
+        }
+    });
+
     // Populate video grid
     videos.forEach((video, index) => {
         const videoCard = document.createElement('div');
@@ -139,16 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('sticky');
         }
     });
-
-    // Open video modal
-    function openVideoModal(videoUrl) {
-        // Extract the file ID from the URL
-        const fileId = videoUrl.split('/')[5];
-        // Construct the correct embed URL
-        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
-        videoPlayer.src = embedUrl;
-        modal.style.display = 'flex'; // Change to 'flex' to center content
-    }
 
     // Close video modal
     closeBtn.addEventListener('click', closeVideoModal);

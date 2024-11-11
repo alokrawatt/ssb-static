@@ -730,3 +730,31 @@ footer {
     color: orange; /* Change text color to orange for night */
 }
 
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the video */
+    transition: background-color 0.3s;
+}
+
+#prevButton {
+    left: 10px; /* Position to the left */
+}
+
+#nextButton {
+    right: 10px; /* Position to the right */
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}
+
