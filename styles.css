@@ -39,8 +39,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
     z-index: 1000;
 }
 
@@ -1183,5 +1182,102 @@ footer {
     transform: scale(1.05);
     animation: shine 1.5s linear infinite;
     text-shadow: 0 0 8px rgba(0, 112, 243, 0.3);
+}
+
+/* Navigation Theme Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+/* Morning Theme (5 AM - 11:59 AM) */
+.morning #navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 15px rgba(255, 183, 77, 0.2);
+}
+
+.morning .nav-links a {
+    color: #333;
+}
+
+.morning .nav-links a:hover {
+    color: #FFB74D;
+}
+
+/* Afternoon Theme (12 PM - 4:59 PM) */
+.afternoon #navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(255, 165, 0, 0.3);
+}
+
+.afternoon .nav-links a {
+    color: #333;
+}
+
+.afternoon .nav-links a:hover {
+    color: #FFA500;
+}
+
+/* Evening Theme (5 PM - 7:59 PM) */
+.evening #navbar {
+    background-color: rgba(45, 45, 45, 0.95);
+    box-shadow: 0 2px 15px rgba(255, 69, 0, 0.3);
+}
+
+.evening .nav-links a {
+    color: #fff;
+}
+
+.evening .nav-links a:hover {
+    color: #FF4500;
+}
+
+/* Night Theme (8 PM - 4:59 AM) */
+.night #navbar {
+    background-color: rgba(25, 25, 25, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.night .nav-links a {
+    color: #fff;
+}
+
+.night .nav-links a:hover {
+    color: #0070f3;
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 768px) {
+    .nav-links.active {
+        background-color: inherit;
+    }
+
+    .evening .nav-links.active,
+    .night .nav-links.active {
+        background-color: rgba(25, 25, 25, 0.95);
+    }
+
+    .morning .nav-links.active,
+    .afternoon .nav-links.active {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .menu-toggle {
+        color: inherit;
+    }
+
+    .evening .menu-toggle,
+    .night .menu-toggle {
+        color: #fff;
+    }
+
+    .morning .menu-toggle,
+    .afternoon .menu-toggle {
+        color: #333;
+    }
 }
 

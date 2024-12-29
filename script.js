@@ -253,3 +253,29 @@ document.addEventListener('DOMContentLoaded', () => {
         span.style.animationDelay = `${index * 0.1}s`;
     });
 });
+
+function updateTheme() {
+    const now = new Date();
+    const hour = now.getHours();
+    const body = document.body;
+
+    // Remove all time-based classes first
+    body.classList.remove('morning', 'afternoon', 'evening', 'night');
+
+    // Add appropriate class based on time
+    if (hour >= 5 && hour < 12) {
+        body.classList.add('morning');
+    } else if (hour >= 12 && hour < 17) {
+        body.classList.add('afternoon');
+    } else if (hour >= 17 && hour < 20) {
+        body.classList.add('evening');
+    } else {
+        body.classList.add('night');
+    }
+}
+
+// Update theme initially
+updateTheme();
+
+// Update theme every minute
+setInterval(updateTheme, 60000);
