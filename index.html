@@ -65,7 +65,24 @@
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <h2 class="animated-text">PORTFOLIO</h2>
-                <div class="video-grid" id="videoGrid"></div>
+                
+                <!-- Add tab buttons -->
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="video-edits">Video Edits</button>
+                        <button class="tab-button" data-tab="motion-graphics">Motion Graphics</button>
+                    </div>
+                </div>
+
+                <!-- Video Edits Tab Content -->
+                <div class="tab-content active" id="video-edits">
+                    <div class="video-grid" id="videoGrid"></div>
+                </div>
+
+                <!-- Motion Graphics Tab Content -->
+                <div class="tab-content" id="motion-graphics">
+                    <div class="video-grid" id="motionGrid"></div>
+                </div>
             </div>
         </section>
     </main>

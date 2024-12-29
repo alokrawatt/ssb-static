@@ -184,4 +184,67 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none'; // Hide the modal
         videoPlayer.src = ''; // Reset the video source
     }
+
+    // Sample motion graphics data
+    const motionGraphics = [
+        { 
+            url: 'https://drive.google.com/file/d/1VIE4uCbyi3SW7f4VoNF-m_6wEHujcLrU/view', 
+            title: 'Logo Animation', 
+            thumbnail: '/thumbnails/project2.png' 
+        },
+        { 
+            url: 'https://drive.google.com/file/d/1V2epZujQsBRa7334c2G8kZymZvamsUll/view', 
+            title: '3D Title Sequence', 
+            thumbnail: '/thumbnails/project3.png' 
+        },
+        { 
+            url: 'https://drive.google.com/file/d/1UWcgvIqVCqRKKbohRm5nzK9CJDPqMuTP/view', 
+            title: 'Kinetic Typography', 
+            thumbnail: '/thumbnails/project4.png' 
+        },
+        { 
+            url: 'https://drive.google.com/file/d/1VSe97E3-8M6Pm1Whfa6LjDBK1-sl9tYv/view', 
+            title: 'Animated Infographic', 
+            thumbnail: '/thumbnails/project5.png' 
+        }
+    ];
+
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Populate motion graphics grid
+    const motionGrid = document.getElementById('motionGrid');
+    motionGraphics.forEach((motion, index) => {
+        const motionCard = document.createElement('div');
+        motionCard.className = 'video-card';
+        motionCard.innerHTML = `
+            <div class="video-thumbnail">
+                <img src="${motion.thumbnail}" alt="${motion.title}">
+                <button class="play-button" aria-label="Play ${motion.title}">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+            <div class="video-info">
+                <h3>${motion.title}</h3>
+            </div>
+        `;
+        motionGrid.appendChild(motionCard);
+
+        const playButton = motionCard.querySelector('.play-button');
+        playButton.addEventListener('click', () => openVideoModal(motion.url));
+    });
 });
