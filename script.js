@@ -247,4 +247,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const playButton = motionCard.querySelector('.play-button');
         playButton.addEventListener('click', () => openVideoModal(motion.url));
     });
+
+    // Add this to your existing DOMContentLoaded event listener
+    document.querySelectorAll('.portfolio h2 span').forEach((span, index) => {
+        span.style.animationDelay = `${index * 0.1}s`;
+    });
 });

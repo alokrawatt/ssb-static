@@ -257,6 +257,69 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.portfolio h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0070f3, transparent);
+    animation: shimmer 2s infinite;
+}
+
+.portfolio h2::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #0070f3;
+    opacity: 0.5;
+    filter: blur(8px);
+    animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.5;
+        filter: blur(8px);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        filter: blur(12px);
+        transform: scale(1.05);
+    }
+}
+
+/* Make the text appear with a typing effect */
+.portfolio h2 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .video-grid {
@@ -412,7 +475,8 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95); /* Darker background for better focus */
+    backdrop-filter: blur(10px); /* Blur effect for background */
     display: none; /* Enable flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -421,9 +485,12 @@ footer {
 .modal-content {
     position: relative;
     background-color: transparent;
-    width: 80%;
-    max-width: 800px;
+    width: 90%; /* Slightly wider */
+    max-width: 1200px; /* Larger maximum width */
     aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     display: flex; /* Ensure the video player is centered */
     justify-content: center; /* Center the video player */
     align-items: center; /* Center the video player */
@@ -810,5 +877,82 @@ footer {
 
 .tab-content.active {
     display: block;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Enhanced Navigation Buttons */
+.nav-button {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#nextButton {
+    transform: translateX(20px);
+}
+
+.modal-content:hover .nav-button {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Video Title */
+.video-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content:hover .video-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progress Bar */
+.video-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #0070f3;
+    width: 0;
+    transition: width 0.1s linear;
 }
 
