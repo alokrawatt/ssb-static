@@ -449,15 +449,17 @@ footer {
     color: #fff;
     padding: 6rem 0 2rem;
     margin-top: 4rem;
+    overflow: hidden; /* Add this to contain the wave */
 }
 
 .footer-wave {
     position: absolute;
-    top: -100px;
+    top: -2px; /* Change from -100px to -2px to eliminate gap */
     left: 0;
     width: 100%;
     height: 100px;
     overflow: hidden;
+    line-height: 0; /* Add this to remove any potential spacing */
 }
 
 .footer-wave svg {
@@ -667,7 +669,7 @@ footer {
     }
 
     .footer-wave {
-        top: -50px;
+        top: -1px; /* Adjust for mobile */
         height: 50px;
     }
 
