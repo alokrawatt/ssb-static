@@ -65,6 +65,7 @@ body {
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
     transition: all 0.3s ease;
@@ -502,6 +503,7 @@ footer {
     );
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
     transition: all 0.3s ease;
