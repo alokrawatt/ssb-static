@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('sticky');
         }
-    }, 100));
+    }));
 
     // Close video modal
     closeBtn.addEventListener('click', closeVideoModal);
