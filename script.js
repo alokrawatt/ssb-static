@@ -163,14 +163,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Sticky navbar
-    window.addEventListener('scroll', () => {
+    // Add debouncing for scroll events
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, arguments), wait);
+        };
+    }
+
+    // Replace scroll event listener with debounced version
+    window.addEventListener('scroll', debounce(() => {
         if (window.scrollY > 0) {
             navbar.classList.add('sticky');
         } else {
             navbar.classList.remove('sticky');
         }
-    });
+    }, 100));
 
     // Close video modal
     closeBtn.addEventListener('click', closeVideoModal);
