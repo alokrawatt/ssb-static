@@ -448,43 +448,41 @@ footer {
     position: relative;
     background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
     color: #fff;
-    padding: 6rem 0 2rem;
-    margin-top: 4rem;
-    overflow: hidden; /* Add this to contain the wave */
+    padding: 3rem 0 1rem;
+    margin-top: 2rem;
+    overflow: hidden;
 }
 
 .footer-wave {
     position: absolute;
-    top: -2px; /* Change from -100px to -2px to eliminate gap */
+    top: -1px; /* Adjust to -1px to eliminate gap */
     left: 0;
     width: 100%;
-    height: 100px;
-    overflow: hidden;
-    line-height: 0; /* Add this to remove any potential spacing */
+    height: 50px;
+    line-height: 0; /* Remove any line height spacing */
+    background: transparent; /* Ensure no background color */
 }
 
 .footer-wave svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-    transform: rotateY(180deg);
+    width: 100%;
+    height: 50px;
+    fill: #1a1a1a; /* Match your page background color */
 }
 
-.footer-wave path {
-    fill: #1a1a1a;
-}
-
+/* Ensure content sits properly */
 .footer-content {
     position: relative;
     z-index: 1;
+    background: transparent;
 }
 
 .footer-main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .footer-brand {
@@ -493,7 +491,7 @@ footer {
 }
 
 .footer-brand h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     background: linear-gradient(
         to right,
@@ -511,7 +509,7 @@ footer {
 
 .footer-brand p {
     color: #888;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: 1rem;
     max-width: 300px;
 }
@@ -615,13 +613,13 @@ footer {
 
 /* Responsive Footer */
 @media (max-width: 768px) {
-    .footer-main {
-        flex-direction: column;
-        gap: 3rem;
+    footer {
+        padding: 2rem 0 1rem;
     }
 
-    .footer-brand {
-        margin-right: 0;
+    .footer-main {
+        flex-direction: column;
+        gap: 2rem;
         text-align: center;
     }
 
@@ -630,57 +628,47 @@ footer {
     }
 
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 2rem;
         align-items: center;
         text-align: center;
     }
 
+    .footer-section {
+        flex: 0 1 auto;
+        min-width: 150px;
+        text-align: left;
+    }
+
     .footer-section h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .footer-section a {
-        text-align: center;
-    }
-
-    .footer-section a:hover {
-        padding-left: 0;
-        transform: translateY(-2px);
-    }
-
-    .footer-section a::before {
-        display: none;
+        left: 0;
+        transform: none;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
-    }
-
-    .footer-location:hover {
-        transform: translateY(-2px);
+        padding-top: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    footer {
-        padding: 4rem 0 2rem;
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
     }
 
-    .footer-wave {
-        top: -1px; /* Adjust for mobile */
-        height: 50px;
+    .footer-section {
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
 
-    .footer-wave svg {
-        height: 50px;
-    }
-
-    .footer-brand h3 {
-        font-size: 2rem;
+    .footer-brand {
+        padding: 0 1rem;
     }
 }
 
