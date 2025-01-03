@@ -1349,23 +1349,17 @@ footer {
 
 .footer-section a[href^="mailto"] {
     display: inline-block;
-    padding: 12px 40px;
-    background: linear-gradient(
-        90deg,
-        #0070f3 0%,
-        #00ff95 100%
-    );
+    padding: 8px 24px;
+    background: #0070f3;
     color: #fff;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 112, 243, 0.2);
 }
 
 .footer-section a[href^="mailto"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 112, 243, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
 }
