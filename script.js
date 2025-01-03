@@ -202,11 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
             thumbnail: '/thumbnails/project2.png' 
         },
         { 
-            url: 'https://drive.google.com/file/d/1V2epZujQsBRa7334c2G8kZymZvamsUll/view', 
-            title: '3D Title Sequence', 
-            thumbnail: '/thumbnails/project3.png' 
-        },
-        { 
             url: 'https://drive.google.com/file/d/1UWcgvIqVCqRKKbohRm5nzK9CJDPqMuTP/view', 
             title: 'Kinetic Typography', 
             thumbnail: '/thumbnails/project4.png' 
